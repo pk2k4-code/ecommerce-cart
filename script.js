@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
       cart.forEach((item, index) => {
         totalPrice += item.price;
         const cartItem = document.createElement("div");
+        cartItem.id = "shopping-item";
         cartItem.innerHTML = `
         ${item.name} - $${item.price.toFixed(2)}
         `;
