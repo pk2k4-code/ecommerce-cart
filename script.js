@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   productList.addEventListener('click', (e) => {
     if (e.target.tagName === 'BUTTON') {
-      const productId = parseInt(e.target.getAttribute('data-id'));   // here we are usign parseInt to convert the string value of the data-id attribute to an integer. This is necessary because the product IDs in the products array are stored as numbers, and we want to ensure that we are comparing the same data types when searching for the product in the array. The numbers are converted to string when they are set as attributes in the HTML, so we need to convert them back to numbers for accurate comparison.
+      const productId = parseInt(e.target.getAttribute('data-id'));   // here we are using parseInt to convert the string value of the data-id attribute to an integer. This is necessary because the product IDs in the products array are stored as numbers, and we want to ensure that we are comparing the same data types when searching for the product in the array. The numbers are converted to string when they are set as attributes in the HTML, so we need to convert them back to numbers for accurate comparison.
       const product = products.find(p => p.id === productId);
       addToCart(product);
       }
